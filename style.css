@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+/**block page-banner**/
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    gap: 1rem;
+}
+
+
+/*footer*/
+.site-footer {
+    display: flex;
+    flex-direction: column;
+}
