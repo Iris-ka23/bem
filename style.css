@@ -1,174 +1,171 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 /**block page-banner**/
 .page {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    font-family: 'Times New Roman', Times, serif;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+  gap: 1rem;
 }
 
 .page-banner {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 /**block page-header**/
 .page-header {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-menu-list__item {
-    list-style: none;
-    color: #b1b3b1;
-    letter-spacing: 1px;
-    cursor: pointer;
+  list-style: none;
+  color: #b1b3b1;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .page-header-navigation {
-    width: 70%;
+  width: 70%;
 }
 
 .nav-menu {
-    width: 50%;
+  width: 50%;
 }
 
 .logbtn {
-    color: aliceblue;
-    background-color: black;
+  color: aliceblue;
+  background-color: black;
 }
 /* sidebar*/
 
 .page-main-sidebar-header {
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 .page-main-sidebar-page-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .page-main-sidebar-page-links__item {
-    list-style: none;
-    color: #b1b3b1;
-    font-size: 14px;
-    cursor: pointer;
+  list-style: none;
+  color: #b1b3b1;
+  font-size: 14px;
+  cursor: pointer;
 }
 /*sidebar-links*/
 .page-main-sidebar-links-menu__item {
-    list-style: disc;
-    color: #b1b3b1;
-    font-size: 14px;
-    cursor: pointer;
+  list-style: disc;
+  color: #b1b3b1;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .page-main-sidebar-links-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 /*main*/
 .page-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .page-main-content {
-    width: 50%;
+  width: 50%;
 }
 
 .page-main-content-section {
-    font-size: 16px;
+  font-size: 16px;
 }
 /*footer*/
 .site-footer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-footer-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .footer-nav-header {
-    text-align: left;
-    color: #b1b3b1;
-    font-size: 18px;
+  text-align: left;
+  color: #b1b3b1;
+  font-size: 18px;
 }
 
 .footer-nav-list__item {
-    list-style: none;
-    color: #b1b3b1;
-    font-size: 14px;
+  list-style: none;
+  color: #b1b3b1;
+  font-size: 14px;
 }
 
 .footer-nav-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
 }
 
 .list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .site-footer-moz {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .site-footer-moz-list {
-    display: flex;
-    gap: 1rem;
-
+  display: flex;
+  gap: 1rem;
 }
 
 .footer-moz-link {
-    cursor: pointer;
-    color: #b1b3b1;
+  cursor: pointer;
+  color: #b1b3b1;
 }
 
 .site-footer-moz-list__item {
-    list-style: none;
-    font-size: 12px;
+  list-style: none;
+  font-size: 12px;
 }
 
 .site-footer-rights {
-    font-size: 12px;
-    color: #b1b3b1;
+  font-size: 12px;
+  color: #b1b3b1;
 }
 
 .site-footer-socials__links {
-    text-align: center;
-    text-transform: uppercase;
-    color: black;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
 }
 
 .footer-socials-icons {
-    list-style: none;
+  list-style: none;
 }
