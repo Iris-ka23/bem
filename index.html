@@ -6,10 +6,17 @@
     <link rel="stylesheet" href="style.css" />
     <title>HTML: HyperText Markup Language</title>
   </head>
-
+<!--
+Cтоит добавить цвета, а то слишком много белого
+Верстка не совсем соответсветвствует mdn (у mdn есть фиксированный размер контента страницы (1440px), а у тебя всё растянуто на 100%)
+-->
   <body>
     <div class="page">
-      <div class="page-banner">
+      <div class="page-banner">  <!-- В принципе, если это блок, то можно не писать название родительского блока, достаточно просто banner, header, main, в противном случае, ты явно связываешь два блока, а этого делать не стоит -->
+            <!--
+             1. Класс пустой
+             2. В названиях лучше избегать названия тегов (например, p, span, h1 и тп), вместо этого надо описывать что представляет из себя сущность. "button__text", "button__icon", "banner__content" и тп
+             -->
         <section class="page-banner__p-text">
           <p class="text">
             Get real-time assistance with your coding queries. Try
@@ -22,7 +29,7 @@
       <div class="page-header">
         <header class="page-header-navigation">
           <nav class="nav-menu">
-            <ul class="nav-menu-list">
+            <ul class="nav-menu-list"> <!-- Тут хорошо бэм использован-->
               <li class="nav-menu-list__item">MDN Web Docs</li>
               <li class="nav-menu-list__item">References</li>
               <li class="nav-menu-list__item">Guides</li>
@@ -35,6 +42,9 @@
           <div class=""></div>
         </header>
         <div>
+          <!-- 1. Обычно так не пишут, вместо этого используют тег button с типом button
+               2. Должно быть две кнопки, 1 - логин, 2 - регистрация
+              -->
           <label for="login">Log in</label>
           <input
             type="button"
@@ -76,7 +86,7 @@
           </ol>
         </div>
         <main class="page-main-content">
-          <header class="page-main-content-header">
+          <header class="page-main-content-header"> <!-- Выглядит как слишком много блоков. Это хороший кандидат на то чтобы стать элементом main-content__header -->
             <h1>HTML: HyperText Markup Language</h1>
           </header>
           <section class="page-main-content-section">
