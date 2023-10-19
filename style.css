@@ -1,28 +1,31 @@
 * {
   box-sizing: border-box;
 }
-/**block page-banner**/
-.page {
+body {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  font-family: "Times New Roman", Times, serif;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
-
-.page-banner {
+/**block page-banner**/
+.page-container {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.banner {
   display: flex;
   justify-content: center;
 }
 
-.text {
+.banner__content {
   font-size: 1rem;
 }
 /**block page-header**/
 .page-header {
   display: flex;
-  justify-content: space-between;
+  gap: 2.5rem;
 }
 
 .nav-menu-list {
@@ -30,88 +33,110 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  gap: 5rem;
 }
 
 .nav-menu-list__item {
   list-style: none;
-  color: #b1b3b1;
+  color: black;
   letter-spacing: 1px;
   cursor: pointer;
 }
+.nav-menu-list__item:hover {
+  background-color: rgb(198, 237, 237);
+}
 
 .page-header-navigation {
-  width: 70%;
+  width: 100%;
 }
 
 .nav-menu {
-  /* Есть такое негласное правило/замечание, что использовать width кроме как 100% считается неправильным.
-        Тут правильнее было бы задать max-width всему контенту в пикселах (у Mdn 1440px), задать ширину 100%. И в случае чего добавлять отступы по бокам и тп.
-        После чего, при помощи gridов распределить место для сайдбаров и основного контента.
-        Дам подсказку, у mdn оно вот такое grid-template-columns: minmax(0,1fr) minmax(0,2.5fr) minmax(0,15rem); (можешь найти через девтулзы) */
-  width: 50%;
+  width: 100%;
 }
 
 .logbtn {
-  color: aliceblue;
+  color: black;
+  background-color: white;
+  border: none;
+  width: 80px;
+}
+.signup-btn {
+  color: white;
   background-color: black;
+  width: 150px;
 }
 /* sidebar*/
 
-.page-main-sidebar-header {
-  text-align: center;
+.sidebar-header {
+  text-align: left;
   text-transform: capitalize;
   letter-spacing: 1px;
 }
 
-.page-main-sidebar-page-links {
+.sidebar-links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
-.page-main-sidebar-page-links__item {
+.sidebar-page-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar-page-links__item {
   list-style: none;
   color: #b1b3b1;
   font-size: 14px;
   cursor: pointer;
 }
+.sidebar-page-links__item:hover {
+  background-color: rgb(247, 219, 219);
+}
 /*sidebar-links*/
-.page-main-sidebar-links-menu__item {
+.sidebar-links-menu__item {
   list-style: disc;
   color: #b1b3b1;
   font-size: 14px;
   cursor: pointer;
 }
-
-.page-main-sidebar-links-menu {
+.sidebar-links-menu__item:hover {
+  background-color: rgb(198, 237, 237);
+}
+.sidebar-links-menu {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 /*main*/
 .page-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 30rem) minmax(0, 15rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 2rem;
 }
 
-.page-main-content {
-  width: 50%;
+.main-content {
+  width: 100%;
 }
 
-.page-main-content-section {
+.main-content-section {
   font-size: 16px;
 }
 /*footer*/
 .site-footer {
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .site-footer-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  gap: 12rem;
 }
 
 .footer-nav-header {

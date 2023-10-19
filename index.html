@@ -6,19 +6,16 @@
     <link rel="stylesheet" href="style.css" />
     <title>HTML: HyperText Markup Language</title>
   </head>
-<!--
-Cтоит добавить цвета, а то слишком много белого
-Верстка не совсем соответсветвствует mdn (у mdn есть фиксированный размер контента страницы (1440px), а у тебя всё растянуто на 100%)
--->
   <body>
-    <div class="page">
-      <div class="page-banner">  <!-- В принципе, если это блок, то можно не писать название родительского блока, достаточно просто banner, header, main, в противном случае, ты явно связываешь два блока, а этого делать не стоит -->
-            <!--
+    <div class="page-container">
+      <div class="banner">
+        <!-- В принципе, если это блок, то можно не писать название родительского блока, достаточно просто banner, header, main, в противном случае, ты явно связываешь два блока, а этого делать не стоит -->
+        <!--
              1. Класс пустой
              2. В названиях лучше избегать названия тегов (например, p, span, h1 и тп), вместо этого надо описывать что представляет из себя сущность. "button__text", "button__icon", "banner__content" и тп
              -->
-        <section class="page-banner__p-text">
-          <p class="text">
+        <section class="banner__content">
+          <p>
             Get real-time assistance with your coding queries. Try
             <a href="https://developer.mozilla.org/en-US/plus/ai-help"
               >AI Help </a
@@ -29,7 +26,7 @@ Cтоит добавить цвета, а то слишком много бел�
       <div class="page-header">
         <header class="page-header-navigation">
           <nav class="nav-menu">
-            <ul class="nav-menu-list"> <!-- Тут хорошо бэм использован-->
+            <ul class="nav-menu-list">
               <li class="nav-menu-list__item">MDN Web Docs</li>
               <li class="nav-menu-list__item">References</li>
               <li class="nav-menu-list__item">Guides</li>
@@ -39,57 +36,38 @@ Cтоит добавить цвета, а то слишком много бел�
               <li class="nav-menu-list__item">AI Help</li>
             </ul>
           </nav>
-          <div class=""></div>
         </header>
-        <div>
-          <!-- 1. Обычно так не пишут, вместо этого используют тег button с типом button
-               2. Должно быть две кнопки, 1 - логин, 2 - регистрация
-              -->
-          <label for="login">Log in</label>
-          <input
-            type="button"
-            class="logbtn"
-            id="login"
-            value="Sign up for free"
-          />
-        </div>
+        <button type="button" class="logbtn">Log in</button>
+        <button type="button" class="signup-btn">Sign up for free</button>
       </div>
       <div class="page-main">
-        <div class="page-main-sidebar-links">
-          <ol class="page-main-sidebar-links-menu list">
-            <li class="page-main-sidebar-links-menu__item">
+        <div class="sidebar-links">
+          <ol class="sidebar-links-menu list">
+            <li class="sidebar-links-menu__item">
               <strong>Tutorials</strong>
             </li>
-            <li class="page-main-sidebar-links-menu__item">HTML basics</li>
-            <li class="page-main-sidebar-links-menu__item">
-              Introduction to HTML
-            </li>
-            <li class="page-main-sidebar-links-menu__item">
-              Multimedia and embedding
-            </li>
-            <li class="page-main-sidebar-links-menu__item">HTML tables</li>
-            <li class="page-main-sidebar-links-menu__item">
+            <li class="sidebar-links-menu__item">HTML basics</li>
+            <li class="sidebar-links-menu__item">Introduction to HTML</li>
+            <li class="sidebar-links-menu__item">Multimedia and embedding</li>
+            <li class="sidebar-links-menu__item">HTML tables</li>
+            <li class="sidebar-links-menu__item">
               <strong>References</strong>
             </li>
-            <li class="page-main-sidebar-links-menu__item">HTML elements</li>
-            <li class="page-main-sidebar-links-menu__item">
-              Global attributes
-            </li>
-            <li class="page-main-sidebar-links-menu__item">Attributes</li>
-            <li class="page-main-sidebar-links-menu__item">
+            <li class="sidebar-links-menu__item">HTML elements</li>
+            <li class="sidebar-links-menu__item">Global attributes</li>
+            <li class="sidebar-links-menu__item">Attributes</li>
+            <li class="sidebar-links-menu__item">
               <strong>Guides</strong>
             </li>
-            <li class="page-main-sidebar-links-menu__item">
-              Block-level elements
-            </li>
-            <li class="page-main-sidebar-links-menu__item">Inline elements</li>
+            <li class="sidebar-links-menu__item">Block-level elements</li>
+            <li class="sidebar-links-menu__item">Inline elements</li>
           </ol>
         </div>
-        <main class="page-main-content">
-          <header class="page-main-content-header"> <!-- Выглядит как слишком много блоков. Это хороший кандидат на то чтобы стать элементом main-content__header -->
+        <main class="main-content">
+          <header class="main-content__header">
             <h1>HTML: HyperText Markup Language</h1>
           </header>
-          <section class="page-main-content-section">
+          <section class="main-content-section">
             <p>
               HTML (HyperText Markup Language) is the most basic building block
               of the Web. It defines the meaning and structure of web content.
@@ -175,8 +153,8 @@ Cтоит добавить цвета, а то слишком много бел�
               become an active participant in the World Wide Web.
             </p>
           </section>
-          <section class="page-main-content-section">
-            <header class="page-main-content-header">
+          <section class="main-content-section">
+            <header class="main-content__header">
               <h2>Key resources</h2>
             </header>
             <p>
@@ -193,18 +171,16 @@ Cтоит добавить цвета, а то слишком много бел�
             </p>
           </section>
         </main>
-        <div class="page-main-sidebar">
-          <header class="page-main-sidebar-header">
+        <div class="sidebar">
+          <header class="sidebar-header">
             <h3>In this article</h3>
           </header>
-          <ul class="page-main-sidebar-page-links list">
-            <li class="page-main-sidebar-page-links__item">Key resources</li>
-            <li class="page-main-sidebar-page-links__item">
-              Beginner's tutorials
-            </li>
-            <li class="page-main-sidebar-page-links__item">Advanced topics</li>
-            <li class="page-main-sidebar-page-links__item">Reference</li>
-            <li class="page-main-sidebar-page-links__item">Related topics</li>
+          <ul class="sidebar-page-links list">
+            <li class="sidebar-page-links__item">Key resources</li>
+            <li class="sidebar-page-links__item">Beginner's tutorials</li>
+            <li class="sidebar-page-links__item">Advanced topics</li>
+            <li class="sidebar-page-links__item">Reference</li>
+            <li class="sidebar-page-links__item">Related topics</li>
           </ul>
         </div>
       </div>
