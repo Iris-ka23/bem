@@ -9,11 +9,6 @@
   <body>
     <div class="page-container">
       <div class="banner">
-        <!-- В принципе, если это блок, то можно не писать название родительского блока, достаточно просто banner, header, main, в противном случае, ты явно связываешь два блока, а этого делать не стоит -->
-        <!--
-             1. Класс пустой
-             2. В названиях лучше избегать названия тегов (например, p, span, h1 и тп), вместо этого надо описывать что представляет из себя сущность. "button__text", "button__icon", "banner__content" и тп
-             -->
         <section class="banner__content">
           <p>
             Get real-time assistance with your coding queries. Try
@@ -23,8 +18,8 @@
           </p>
         </section>
       </div>
-      <div class="page-header">
-        <header class="page-header-navigation">
+      <div class="header">
+        <header class="header-navigation indent">
           <nav class="nav-menu">
             <ul class="nav-menu-list">
               <li class="nav-menu-list__item">MDN Web Docs</li>
@@ -37,10 +32,13 @@
             </ul>
           </nav>
         </header>
+        <div>
         <button type="button" class="logbtn">Log in</button>
         <button type="button" class="signup-btn">Sign up for free</button>
       </div>
-      <div class="page-main">
+      </div>
+      <div class="main indent">
+        <div class="sidebar-container">
         <div class="sidebar-links">
           <ol class="sidebar-links-menu list">
             <li class="sidebar-links-menu__item">
@@ -63,11 +61,24 @@
             <li class="sidebar-links-menu__item">Inline elements</li>
           </ol>
         </div>
+        <div class="sidebar-article">
+          <header class="sidebar-article__header">
+            <h3>In this article</h3>
+          </header>
+          <ul class="article-menu list">
+            <li class="article-links__item">Key resources</li>
+            <li class="article-links__item">Beginner's tutorials</li>
+            <li class="article-links__item">Advanced topics</li>
+            <li class="article-links__item">Reference</li>
+            <li class="article-links__item">Related topics</li>
+          </ul>
+        </div>
+      </div>
         <main class="main-content">
           <header class="main-content__header">
             <h1>HTML: HyperText Markup Language</h1>
           </header>
-          <section class="main-content-section">
+          <section class="main-content__section">
             <p>
               HTML (HyperText Markup Language) is the most basic building block
               of the Web. It defines the meaning and structure of web content.
@@ -153,7 +164,7 @@
               become an active participant in the World Wide Web.
             </p>
           </section>
-          <section class="main-content-section">
+          <section class="main-content__section">
             <header class="main-content__header">
               <h2>Key resources</h2>
             </header>
@@ -171,71 +182,61 @@
             </p>
           </section>
         </main>
-        <div class="sidebar">
-          <header class="sidebar-header">
-            <h3>In this article</h3>
-          </header>
-          <ul class="sidebar-page-links list">
-            <li class="sidebar-page-links__item">Key resources</li>
-            <li class="sidebar-page-links__item">Beginner's tutorials</li>
-            <li class="sidebar-page-links__item">Advanced topics</li>
-            <li class="sidebar-page-links__item">Reference</li>
-            <li class="sidebar-page-links__item">Related topics</li>
-          </ul>
-        </div>
+        
       </div>
     </div>
-    <footer class="footer">
-      <div class="footer-info">
-        <div class="footer-socials">
+    <footer class="footer indent">
+      <div class="footer__socials">
+        <div>
           <a
             href="https://developer.mozilla.org/en-US/"
-            class="footer-socials__links"
+            class="footer__socials-link"
             ><strong>mdn</strong></a
           >
           <p>Your blueprint for a better internet.</p>
-          <ul class="footer-socials-icons list">
-            <li class="footer-socials-icons">
-             
+          <ul class="footer__socials-icon list">
+            <li class="socials-icon__item"><a href="https://twitter.com/mozdevnet" target="_blank"><img src="img/twitter.svg" class ="icon"alt="twitter"> </a></li>
+            <li class="socials-icon__item"><a href="https://twitter.com/mozdevnet" target="_blank"><img src="img/github.svg" class ="icon"alt="twitter"> </a></li>
+            <li class="socials-icon__item"><a href="https://twitter.com/mozdevnet" target="_blank"><img src="img/moz.svg" class ="icon"alt="twitter"> </a></li>
         </div>
-        <div class="footer-nav-col">
-          <h2 class="footer-nav-header">MDN</h2>
-          <ul class="footer-nav-list list">
-            <li class="footer-nav-list__item">About</li>
-            <li class="footer-nav-list__item">Blog</li>
-            <li class="footer-nav-list__item">Careers</li>
-            <li class="footer-nav-list__item">Advertise with us</li>
+        <div>
+          <h2 class="site__header">MDN</h2>
+          <ul class="site-nav-list list">
+            <li class="site-nav-list__item">About</li>
+            <li class="site-nav-list__item">Blog</li>
+            <li class="site-nav-list__item">Careers</li>
+            <li class="site-nav-list__item">Advertise with us</li>
           </ul>
         </div>
-        <div class="footer-nav-col">
-          <h2 class="footer-nav-header">Support</h2>
-          <ul class="footer-nav-list list">
-            <li class="footer-nav-list__item">Product help</li>
-            <li class="footer-nav-list__item">Report an issue</li>
+        <div>
+          <h2 class="site__header">Support</h2>
+          <ul class="site-nav-list list">
+            <li class="site-nav-list__item">Product help</li>
+            <li class="site-nav-list__item">Report an issue</li>
           </ul>
         </div>
-        <div class="footer-nav-col">
-          <h2 class="footer-nav-header">Our communities</h2>
-          <ul class="footer-nav-list list">
-            <li class="footer-nav-list__item">MDN Community</li>
-            <li class="footer-nav-list__item">MDN Forum</li>
-            <li class="footer-nav-list__item">MDN Chat</li>
+        <div>
+          <h2 class="site__header">Our communities</h2>
+          <ul class="site-nav-list list">
+            <li class="site-nav-list__item">MDN Community</li>
+            <li class="site-nav-list__item">MDN Forum</li>
+            <li class="site-nav-list__item">MDN Chat</li>
           </ul>
         </div>
-        <div class="footer-nav-col">
-          <h2 class="footer-nav-header">Developers</h2>
-          <ul class="footer-nav-list list">
-            <li class="footer-nav-list__item">Web Technologies</li>
-            <li class="footer-nav-list__item">Learn Web Development</li>
-            <li class="footer-nav-list__item">MDN Plus</li>
-            <li class="footer-nav-list__item">Hacks Blog</li>
+        <div>
+          <h2 class="site__header">Developers</h2>
+          <ul class="site-nav-list list">
+            <li class="site-nav-list__item">Web Technologies</li>
+            <li class="site-nav-list__item">Learn Web Development</li>
+            <li class="site-nav-list__item">MDN Plus</li>
+            <li class="site-nav-list__item">Hacks Blog</li>
           </ul>
         </div>
       </div>
-      <div class="footer-moz">
+      <div class="footer__info">
         <a
           href="https://www.mozilla.org/"
-          class="footer-moz-logo-link"
+          class="footer__info-link"
           target="_blank"
         >
           <svg
@@ -255,54 +256,54 @@
             ></path>
           </svg>
         </a>
-        <ul class="footer-moz-list list">
-          <li class="footer-moz-list__item">
+        <ul class="footer__info-list list">
+          <li class="info-list__item">
             <a
               href="https://www.mozilla.org/privacy/websites/"
-              class="footer-moz-link"
+              class="footer__info-link"
               >Website Privacy Notice</a
             >
           </li>
-          <li class="footer-moz-list__item">
+          <li class="info-list__item">
             <a
               href="https://www.mozilla.org/privacy/websites/#cookies"
-              class="footer-moz-link"
+              class="footer__info-link"
               target="_blank"
               >Cookies</a
             >
           </li>
-          <li class="footer-moz-list__item">
+          <li class="info-list__item">
             <a
               href="https://www.mozilla.org/about/legal/terms/mozilla"
-              class="footer-moz-link"
+              class="footer__info-link"
               target="_blank"
               >Legal</a
             >
           </li>
-          <li class="footer-moz-list__item">
+          <li class="info-list__item">
             <a
               href="https://www.mozilla.org/about/governance/policies/participation/"
-              class="footer-moz-link"
+              class="footer__info-link"
               target="_blank"
               >Community Participation Guidelines</a
             >
           </li>
         </ul>
       </div>
-      <div class="footer-rights">
+      <div class="footer__copyrights">
         <p>
           Visit
-          <a href="https://www.mozilla.org/" class="footer-moz-link"
+          <a href="https://www.mozilla.org/" class="footer__info-link"
             >Mozilla Corporation’s</a
           >not-for-profit parent, the
-          <a href="https://foundation.mozilla.org/" class="footer-moz-link"
+          <a href="https://foundation.mozilla.org/" class="footer__info-link"
             >Mozilla Foundation.</a
           >
           Portions of this content are ©1998–2023 by individual mozilla.org
           contributors. Content available under
           <a
             href="https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license"
-            class="footer-moz-link"
+            class="footer__info-link"
           ></a
           >a Creative Commons license.
         </p>
