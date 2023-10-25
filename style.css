@@ -9,9 +9,11 @@ body {
 }
 /**page-container**/
 .page-container {
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
+}
+.container {
+  max-width: 1440px;
   height: 100%;
 }
 .banner {
@@ -34,8 +36,6 @@ body {
 }
 .nav-menu-list {
   display: flex;
-  margin: 0;
-  padding: 0;
   gap: 5rem;
 }
 .nav-menu-list__item {
@@ -50,18 +50,18 @@ body {
 .nav-menu {
   width: 100%;
 }
+.btn_size {
+  width: 150px;
+  height: 50px;
+}
 .logbtn {
   color: black;
   background-color: white;
   border: none;
-  width: 80px;
-  height: 50px;
 }
 .signup-btn {
   color: white;
   background-color: black;
-  width: 150px;
-  height: 50px;
 }
 /*main-content*/
 .main {
@@ -137,7 +137,6 @@ body {
 }
 /*Footer*/
 .footer {
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   gap: 10px;
