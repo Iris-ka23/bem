@@ -51,6 +51,7 @@ body {
   width: 100%;
 }
 .btn_size {
+  /* Внешняя геометрия не должна задаваться нигде кроме элементов*/
   width: 150px;
   height: 50px;
 }
@@ -133,7 +134,7 @@ body {
 }
 .indent {
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 0.5rem;/*Внешняя геометри*/
 }
 /*Footer*/
 .footer {
@@ -162,11 +163,11 @@ body {
   list-style: none;
 }
 .icon {
-  width: 25px;
+  width: 25px; /*Внешняя геометри*/
   height: 25px;
 }
 .footer-icons {
-  width: 50px;
+  width: 50px;/*Внешняя геометри*/
   height: 50px;
 }
 .site__header {
@@ -201,7 +202,7 @@ body {
   gap: 1rem;
 }
 .footer__info-link {
-  cursor: pointer;
+  cursor: pointer; /* Этот стиль переиспользуется в 4х местах, почему бы не вынести его в отдельный класс 'link' например?*/
   color: #b1b3b1;
 }
 .info-list__item {
