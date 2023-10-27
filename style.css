@@ -243,7 +243,7 @@ body {
     gap: 1rem;
   }
   .nav-menu-list__item {
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid gray;
     border-radius: 2px;
   }
@@ -277,7 +277,7 @@ body {
     gap: 1rem;
   }
   .nav-menu-list__item {
-    text-align: start;
+    text-align: left;
     border-bottom: 1px solid grey;
   }
   .banner__content {
