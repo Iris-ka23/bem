@@ -231,6 +231,11 @@ body {
   .nav-menu-list {
     gap: 1rem;
   }
+   .nav-menu-list__item {
+    text-align: left;
+    border-bottom: 1px solid gray;
+    border-radius: 2px;
+  }
 }
 @media (max-width: 1024px) {
   .header {
