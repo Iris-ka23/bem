@@ -18,50 +18,57 @@
           </p>
         </section>
       </div>
-      <!--Хедер на мобилках ведет себя не так как на MDN-->
       <div class="header">
-        <header class="header-navigation indent">
+        <header class="header-navigation">
           <nav class="nav-menu">
             <ul class="nav-menu-list list">
-              <li class="nav-menu-list__item">MDN Web Docs</li>
-              <li class="nav-menu-list__item">References</li>
-              <li class="nav-menu-list__item">Guides</li>
-              <li class="nav-menu-list__item">Plus</li>
-              <li class="nav-menu-list__item">Blog</li>
-              <li class="nav-menu-list__item">Play</li>
-              <li class="nav-menu-list__item">AI Help</li>
+              <li class="nav-menu-list__item link">MDN Web Docs</li>
+              <li class="nav-menu-list__item link">References</li>
+              <li class="nav-menu-list__item link">Guides</li>
+              <li class="nav-menu-list__item link">Plus</li>
+              <li class="nav-menu-list__item link">Blog</li>
+              <li class="nav-menu-list__item link">Play</li>
+              <li class="nav-menu-list__item link">AI Help</li>
             </ul>
           </nav>
         </header>
-        <div>
-          <button type="button" class="logbtn btn_size">Log in</button>
-          <button type="button" class="signup-btn btn_size">
+        <div class="buttons">
+          <button type="button" class="buttons__logbtn buttons__size">
+            Log in
+          </button>
+          <button type="button" class="buttons__signupbtn buttons__size">
             Sign up for free
           </button>
         </div>
       </div>
-      <div class="main indent">
+      <div class="main">
         <div class="sidebar-container">
           <div class="sidebar-links">
             <ol class="sidebar-links-menu list">
-              <li class="sidebar-links-menu__item">
+              <li class="sidebar-links-menu__item link">
                 <strong>Tutorials</strong>
               </li>
-              <li class="sidebar-links-menu__item">HTML basics</li>
-              <li class="sidebar-links-menu__item">Introduction to HTML</li>
-              <li class="sidebar-links-menu__item">Multimedia and embedding</li>
-              <li class="sidebar-links-menu__item">HTML tables</li>
-              <li class="sidebar-links-menu__item">
+              <li class="sidebar-links-menu__item link">HTML basics</li>
+              <li class="sidebar-links-menu__item link">
+                Introduction to HTML
+              </li>
+              <li class="sidebar-links-menu__item link">
+                Multimedia and embedding
+              </li>
+              <li class="sidebar-links-menu__item link">HTML tables</li>
+              <li class="sidebar-links-menu__item link">
                 <strong>References</strong>
               </li>
-              <li class="sidebar-links-menu__item">HTML elements</li>
-              <li class="sidebar-links-menu__item">Global attributes</li>
-              <li class="sidebar-links-menu__item">Attributes</li>
-              <li class="sidebar-links-menu__item">
+              <li class="sidebar-links-menu__item link">HTML elements</li>
+              <li class="sidebar-links-menu__item link">Global attributes</li>
+              <li class="sidebar-links-menu__item link">Attributes</li>
+              <li class="sidebar-links-menu__item link">
                 <strong>Guides</strong>
               </li>
-              <li class="sidebar-links-menu__item">Block-level elements</li>
-              <li class="sidebar-links-menu__item">Inline elements</li>
+              <li class="sidebar-links-menu__item link">
+                Block-level elements
+              </li>
+              <li class="sidebar-links-menu__item link">Inline elements</li>
             </ol>
           </div>
           <div class="sidebar-article">
@@ -69,11 +76,11 @@
               <h3>In this article</h3>
             </header>
             <ul class="article-menu list">
-              <li class="article-links__item">Key resources</li>
-              <li class="article-links__item">Beginner's tutorials</li>
-              <li class="article-links__item">Advanced topics</li>
-              <li class="article-links__item">Reference</li>
-              <li class="article-links__item">Related topics</li>
+              <li class="article-links__item link">Key resources</li>
+              <li class="article-links__item link">Beginner's tutorials</li>
+              <li class="article-links__item link">Advanced topics</li>
+              <li class="article-links__item link">Reference</li>
+              <li class="article-links__item link">Related topics</li>
             </ul>
           </div>
         </div>
@@ -187,7 +194,7 @@
         </main>
       </div>
     </div>
-    <footer class="footer indent container">
+    <footer class="footer container">
       <div class="footer__socials">
         <div>
           <a
@@ -198,18 +205,39 @@
           <p>Your blueprint for a better internet.</p>
           <ul class="footer__socials-icon list">
             <li class="socials-icon__item">
-              <a href="https://twitter.com/mozdevnet" target="_blank"
-                ><img src="img/twitter.svg" class="icon" alt="twitter" />
+              <a
+                href="https://twitter.com/mozdevnet"
+                target="_blank"
+                class="social-icon-link"
+                ><img
+                  src="img/twitter.svg"
+                  class="social-icon-link__logo"
+                  alt="twitter"
+                />
               </a>
             </li>
             <li class="socials-icon__item">
-              <a href="https://twitter.com/mozdevnet" target="_blank"
-                ><img src="img/github.svg" class="icon" alt="twitter" />
+              <a
+                href="https://twitter.com/mozdevnet"
+                target="_blank"
+                class="social-icon-link"
+                ><img
+                  src="img/github.svg"
+                  class="social-icon-link__logo"
+                  alt="twitter"
+                />
               </a>
             </li>
             <li class="socials-icon__item">
-              <a href="https://twitter.com/mozdevnet" target="_blank"
-                ><img src="img/moz.svg" class="icon" alt="twitter" />
+              <a
+                href="https://twitter.com/mozdevnet"
+                target="_blank"
+                class="social-icon-link"
+                ><img
+                  src="img/moz.svg"
+                  class="social-icon-link__logo"
+                  alt="twitter"
+                />
               </a>
             </li>
           </ul>
@@ -251,7 +279,7 @@
       <div class="footer__info">
         <a
           href="https://www.mozilla.org/"
-          class="footer__info-link"
+          class="footer__info-link link"
           target="_blank"
         >
           <svg
@@ -272,7 +300,7 @@
           </svg>
         </a>
         <ul class="footer__info-list list">
-          <li class="info-list__item">
+          <li class="info-list__item link">
             <a
               href="https://www.mozilla.org/privacy/websites/"
               class="footer__info-link"
@@ -282,7 +310,7 @@
           <li class="info-list__item">
             <a
               href="https://www.mozilla.org/privacy/websites/#cookies"
-              class="footer__info-link"
+              class="footer__info-link link"
               target="_blank"
               >Cookies</a
             >
@@ -290,7 +318,7 @@
           <li class="info-list__item">
             <a
               href="https://www.mozilla.org/about/legal/terms/mozilla"
-              class="footer__info-link"
+              class="footer__info-link link"
               target="_blank"
               >Legal</a
             >
@@ -298,7 +326,7 @@
           <li class="info-list__item">
             <a
               href="https://www.mozilla.org/about/governance/policies/participation/"
-              class="footer__info-link"
+              class="footer__info-link link"
               target="_blank"
               >Community Participation Guidelines</a
             >
@@ -308,17 +336,19 @@
       <div class="footer__copyrights">
         <p>
           Visit
-          <a href="https://www.mozilla.org/" class="footer__info-link"
+          <a href="https://www.mozilla.org/" class="footer__info-link link"
             >Mozilla Corporation’s</a
           >not-for-profit parent, the
-          <a href="https://foundation.mozilla.org/" class="footer__info-link"
+          <a
+            href="https://foundation.mozilla.org/"
+            class="footer__info-link link"
             >Mozilla Foundation.</a
           >
           Portions of this content are ©1998–2023 by individual mozilla.org
           contributors. Content available under
           <a
             href="https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license"
-            class="footer__info-link"
+            class="footer__info-link link"
           ></a
           >a Creative Commons license.
         </p>

@@ -11,6 +11,7 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 .container {
   max-width: 1440px;
@@ -31,38 +32,39 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.page-header-navigation {
+.header-navigation {
   width: 100%;
 }
 .nav-menu-list {
   display: flex;
   gap: 5rem;
 }
+.nav-menu {
+  width: 100%;
+}
 .nav-menu-list__item {
   list-style: none;
   color: black;
   letter-spacing: 1px;
-  cursor: pointer;
 }
 .nav-menu-list__item:hover {
   background-color: rgb(198, 237, 237);
 }
-.nav-menu {
-  width: 100%;
+.buttons {
+  display: flex;
 }
-.btn_size {
-  /* Внешняя геометрия не должна задаваться нигде кроме элементов*/
-  width: 150px;
-  height: 50px;
-}
-.logbtn {
+.buttons__logbtn {
   color: black;
   background-color: white;
   border: none;
 }
-.signup-btn {
+.buttons__signupbtn {
   color: white;
   background-color: black;
+}
+.buttons__size {
+  width: 150px;
+  height: 50px;
 }
 /*main-content*/
 .main {
@@ -94,7 +96,7 @@ body {
 .sidebar-article__header {
   text-align: left;
   text-transform: capitalize;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .article-links {
   display: flex;
@@ -110,7 +112,6 @@ body {
   list-style: none;
   color: #b1b3b1;
   font-size: 14px;
-  cursor: pointer;
 }
 .article-links__item:hover {
   background-color: rgb(247, 219, 219);
@@ -119,7 +120,6 @@ body {
   list-style: none;
   color: #b1b3b1;
   font-size: 14px;
-  cursor: pointer;
 }
 .sidebar-links-menu__item::marker {
   content: "▶";
@@ -131,10 +131,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-}
-.indent {
-  padding: 1rem;
-  margin: 0.5rem;/*Внешняя геометри*/
 }
 /*Footer*/
 .footer {
@@ -162,13 +158,12 @@ body {
 .socials-icon__item {
   list-style: none;
 }
-.icon {
-  width: 25px; /*Внешняя геометри*/
-  height: 25px;
+.social-icon-link {
+  text-decoration: none;
 }
-.footer-icons {
-  width: 50px;/*Внешняя геометри*/
-  height: 50px;
+.social-icon-link__logo {
+  width: 25px;
+  height: 25px;
 }
 .site__header {
   text-align: left;
@@ -202,8 +197,10 @@ body {
   gap: 1rem;
 }
 .footer__info-link {
-  cursor: pointer; /* Этот стиль переиспользуется в 4х местах, почему бы не вынести его в отдельный класс 'link' например?*/
   color: #b1b3b1;
+}
+.link {
+  cursor: pointer;
 }
 .info-list__item {
   list-style: none;
@@ -231,10 +228,13 @@ body {
   .footer__socials {
     gap: 8rem;
   }
+  .nav-menu-list {
+    gap: 1rem;
+  }
 }
 @media (max-width: 1024px) {
   .header {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1rem;
   }
@@ -244,12 +244,14 @@ body {
   }
   .nav-menu-list__item {
     text-align: center;
-  }
-  .btn_size {
-    width: 100%;
+    border-bottom: 1px solid gray;
+    border-radius: 2px;
   }
   .banner__content {
     font-size: 0.9rem;
+  }
+  .buttons {
+    flex-direction: column-reverse;
   }
   .main {
     grid-template-areas: "sidebar main";
@@ -266,7 +268,7 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1rem;
   }
@@ -275,10 +277,8 @@ body {
     gap: 1rem;
   }
   .nav-menu-list__item {
-    text-align: center;
-  }
-  .btn_size {
-    width: 100%;
+    text-align: start;
+    border-bottom: 1px solid grey;
   }
   .banner__content {
     font-size: 0.9rem;
@@ -299,6 +299,9 @@ body {
 @media (max-width: 480px) {
   .nav-menu-list__item {
     font-size: 0.9rem;
+  }
+  .banner__content {
+    text-align: center;
   }
   .footer__socials {
     flex-direction: column;
@@ -332,8 +335,6 @@ body {
   }
   .footer__info-link {
     text-align: center;
-  }
-  .footer__info-link {
     font-size: 10px;
   }
   .footer__socials {
