@@ -259,12 +259,11 @@ body {
     flex-direction: column-reverse;
   }
   .main {
-    grid-template-areas: "sidebar main";
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-areas: "main-content";
+    grid-template-columns: 1fr;
   }
   .sidebar-container {
-    display: flex;
-    flex-direction: column;
+   display: none;
   }
   .footer__socials {
     gap: 2rem;
@@ -289,12 +288,11 @@ body {
     font-size: 0.9rem;
   }
   .main {
-    grid-template-areas: "sidebar main";
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-areas: "main-content";
+    grid-template-columns: 1fr;
   }
   .sidebar-container {
-    display: flex;
-    flex-direction: column;
+    display: none;
   }
   .footer__socials {
     gap: 1rem;
